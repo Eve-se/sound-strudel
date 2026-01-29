@@ -3,3 +3,17 @@ setcpm(140/4)
 const Roland = "tr909"
 
 $: s("hh:4!12 bd:2!4 lt:2!2").gain(rand.range(4, .9))._scope( )
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+setcpm(135/5/1)
+
+const Roland = "tr909"
+
+$: s("hh:4!12 bd:2!4").gain(rand.range(4, .9))._scope( )
+$: s("sbd!4").gain(2)
+
+///$bass: n(irand(13).sub(4).seg(16)).scale("c:minor").gain(1)
+
+$: n("<0 4 0 9 7 5 2 0 1 9>*16").scale("g:minor").trans(-12).gain(4)
