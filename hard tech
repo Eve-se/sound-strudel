@@ -1,0 +1,5 @@
+setcpm(140/4)
+
+const Roland = "tr909"
+
+$: s("hh:4!12 bd:2!4 lt:2!2").gain(rand.range(4, .9))._scope( )
