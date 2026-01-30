@@ -23,3 +23,11 @@ $: n("<0 4 0 9 7 5 2 0 1 9>*16").scale("g:minor").trans(-12).gain(4)
 
 $: s("supersaw").fast(4).seg(16).scale("f:minor").delay(0.50)._scope()
 
+777777777777777777777777777777777777777777777777777777777777777777777777
+
+
+setcpm(120/4)
+$: s("supersaw ,3hz ,4hz ,7").fast(7).gain(3)._scope()
+$: s("sawtooth ,1hz ,5hz").gain(4).fast(2)._scope()
+
+
