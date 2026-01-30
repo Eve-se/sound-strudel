@@ -17,3 +17,9 @@ $: s("sbd!4").gain(2)
 ///$bass: n(irand(13).sub(4).seg(16)).scale("c:minor").gain(1)
 
 $: n("<0 4 0 9 7 5 2 0 1 9>*16").scale("g:minor").trans(-12).gain(4)
+
+/////////////////////////////////////////////////////////////////////////
+
+
+$: s("supersaw").fast(4).seg(16).scale("f:minor").delay(0.50)._scope()
+
