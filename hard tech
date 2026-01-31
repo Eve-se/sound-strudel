@@ -14,15 +14,15 @@ const Roland = "tr909"
 $: s("hh:4!12 bd:2!4").gain(rand.range(4, .9))._scope( )
 $: s("sbd!4").gain(2)
 
-///$bass: n(irand(13).sub(4).seg(16)).scale("c:minor").gain(1)
 
-$: n("<0 4 0 9 7 5 2 0 1 9>*16").scale("g:minor").trans(-12).gain(4)
+
+
 
 /////////////////////////////////////////////////////////////////////////
 
 
-$: s("supersaw").fast(4).seg(16).scale("f:minor").delay(0.50)._scope()
-: s("supersaw").fast(4).seg(16).scale("d:mayor").delay(2.5)
+
+$: s("supersaw").fast(4).seg(16).scale("d:mayor").delay(2.5)
  .lpq(slider(4.344 ,3 ,10))
  .sustain(0.3)
  .release(0.6)
@@ -37,8 +37,19 @@ $: s("supersaw").fast(4).seg(16).scale("f:minor").delay(0.50)._scope()
 777777777777777777777777777777777777777777777777777777777777777777777777
 
 
-setcpm(120/4)
-$: s("supersaw ,3hz ,4hz ,7").fast(7).gain(3)._scope()
-$: s("sawtooth ,1hz ,5hz").gain(4).fast(2)._scope()
+$: s("sawtooth")
+  .seg(3)
+  .scale("e:minor")
+  .gain(0.4)
+  .fast(1.7)
+  .delay(1.7)
+  .lpq(slider(6.74 ,3 ,20))
+  .sustain(0.7)
+  .release(0.3)
+  .shape(0.6)
+  .lpenv(slider(21.097, 1, 30))
+  .room(.1)
+  .postgain(1)
+  .color("red")._scope()
 
 
