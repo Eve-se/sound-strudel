@@ -22,6 +22,17 @@ $: n("<0 4 0 9 7 5 2 0 1 9>*16").scale("g:minor").trans(-12).gain(4)
 
 
 $: s("supersaw").fast(4).seg(16).scale("f:minor").delay(0.50)._scope()
+: s("supersaw").fast(4).seg(16).scale("d:mayor").delay(2.5)
+ .lpq(slider(4.344 ,3 ,10))
+ .sustain(0.3)
+ .release(0.6)
+ .shape(0.2)
+ .lpenv(slider(1.693, 1, 12))
+ .room(.2)
+ .postgain(1.5)
+ .color("red")._scope()
+
+
 
 777777777777777777777777777777777777777777777777777777777777777777777777
 
