@@ -1,20 +1,11 @@
-setcpm(140/4)
+setcpm(120/4)
 
-const Roland = "tr909"
-
-$: s("hh:4!12 bd:2!4 lt:2!2").gain(rand.range(4, .9))._scope( )
-
-//////////////////////////////////////////////////////////////////////////////
-
-
-setcpm(135/5/1)
-
-const Roland = "tr909"
-
-$: s("hh:4!12 bd:2!4").gain(rand.range(4, .9))._scope( )
-$: s("sbd!4").gain(2)
-
-
+$: s("bd:3*4, oh:6*8, sd:4*2, cr:4*1")
+ .shape(.2)
+ .sustain(2)
+ .hpf(30)
+ .postgain(2)
+ .color("blue")._scope()
 
 
 
@@ -51,5 +42,39 @@ $: s("sawtooth")
   .room(.1)
   .postgain(1)
   .color("red")._scope()
+
+/////////////////////////////////////////////////////////////////////
+
+
+$: s("wt_digital")
+ .gain(2.5)
+ .scale("a:mayor")
+ .sustain(1.5)
+ .seg(4)
+ .room(.6)
+ .delay(2.4)
+ .fast(2)
+ .release(0.5)
+ .shape(0.3)
+ .postgain(1.4)
+ .color("white")._scope()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
