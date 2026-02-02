@@ -59,7 +59,23 @@ $: s("wt_digital")
  .postgain(1.4)
  .color("white")._scope()
 
+//////////////////////////////////////////////////////////////////
 
+
+$: s("z_noise")
+ .seg(3)
+  .scale("f:minor")
+  .gain(0.2)
+  .fast(0.6)
+  .delay(0.4)
+  .lpq(slider(3870 ,2500 ,5000))
+  .sustain(0.8)
+  .release(0.6)
+  .shape(0.6)
+  .lpenv(slider(12.455, 1, 30))
+  .room(0.3)
+  .postgain(1.2)
+  ._scope()
 
 
 
