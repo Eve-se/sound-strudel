@@ -77,7 +77,23 @@ $: s("z_noise")
   .postgain(1.2)
   ._scope()
 
+////////////////////////////////////////////////////////////
 
+
+$: s("z_square")
+ .seg(2)
+  .scale("a:minor")
+  .gain(4)
+  .fast(0.5)
+  .delay(0.3)
+  .lpq(slider(3245 ,2500 ,5000))
+  .sustain(0.4)
+  .release(0.7)
+  .shape(0.8)
+  .lpenv(slider(20.923, 1, 30))
+  .room(0.7)
+  .postgain(0.5)
+  ._scope()
 
 
 
