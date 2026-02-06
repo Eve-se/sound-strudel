@@ -1,4 +1,4 @@
-setcpm(120/4)
+setcpm(120/4) super hard acid
 
 $: s("bd:3*4, oh:6*8, sd:4*2, cr:4*1")
  .shape(.2)
@@ -6,12 +6,6 @@ $: s("bd:3*4, oh:6*8, sd:4*2, cr:4*1")
  .hpf(30)
  .postgain(2)
  .color("blue")._scope()
-
-
-
-/////////////////////////////////////////////////////////////////////////
-
-
 
 $: s("supersaw").fast(4).seg(16).scale("d:mayor").delay(2.5)
  .lpq(slider(4.344 ,3 ,10))
@@ -22,10 +16,6 @@ $: s("supersaw").fast(4).seg(16).scale("d:mayor").delay(2.5)
  .room(.2)
  .postgain(1.5)
  .color("red")._scope()
-
-
-
-777777777777777777777777777777777777777777777777777777777777777777777777
 
 
 $: s("sawtooth")
@@ -43,9 +33,6 @@ $: s("sawtooth")
   .postgain(1)
   .color("red")._scope()
 
-/////////////////////////////////////////////////////////////////////
-
-
 $: s("wt_digital")
  .gain(2.5)
  .scale("a:mayor")
@@ -58,9 +45,6 @@ $: s("wt_digital")
  .shape(0.3)
  .postgain(1.4)
  .color("white")._scope()
-
-//////////////////////////////////////////////////////////////////
-
 
 $: s("z_noise")
  .seg(3)
@@ -77,9 +61,6 @@ $: s("z_noise")
   .postgain(1.2)
   ._scope()
 
-////////////////////////////////////////////////////////////
-
-
 $: s("z_square")
  .seg(2)
   .scale("a:minor")
@@ -95,11 +76,39 @@ $: s("z_square")
   .postgain(0.5)
   ._scope()
 
+--------------------------------------------------------------------------------------------------
 
 
 
+setcpm(120/4) jarden up
+
+$: s("sbd:2*4, oh:4*1, sd:4*2")
+ .shape(.2)
+ .sustain(2)
+ .hpf(30)
+ .postgain(2)
+ .color("blue")._scope()
+
+$: s("bd").beat("0,7,10,3", 16)
+.n(accelerationX.segment(7).range(0,9)).scale("e:minor").gain(1).postgain(1.2)
+.note("d d a# a").s("sawtooth").chorus(.5).sustain(6).duckorbit(6).duckattack(0.2).duckdepth(5)
+ .n(orientationGamma.segment(1).range(0,2)).scale("c:minor")
+  ._scope()
 
 
+$: s("crackle*4").density("<0.03 0.07 0.3 0.6>".slow(1)).freq("220 110 440 110").s("superzow").osc()
+.note("c2 e2 f2 g2")
+.sound('sawtooth')
+.hpf(600)
+.hpa("<.5 .25 .1 .01>/4")
+.hpenv(7)
+._scope()
+
+
+$: n(run(16)).scale("d:minor:pentatonic").s("sawtooth").delay(.4).orbit(6)
+ .n(gravityY.segment(4).range(0,7)).scale("C:minor")
+ .n(orientationAlpha.segment(7).range(0,7)).scale("C:minor")
+ ._scope()
 
 
 
