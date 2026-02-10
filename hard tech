@@ -110,7 +110,58 @@ $: n(run(16)).scale("d:minor:pentatonic").s("sawtooth").delay(.4).orbit(6)
  .n(orientationAlpha.segment(7).range(0,7)).scale("C:minor")
  ._scope()
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+setcpm(128/4)  starfire 
+
+$: s("sbd:4*4, oh:6*8, sd:4*2, cr:4*2")
+ .shape(.2)
+ .sustain(4)
+ .hpf(20)
+ .postgain(2)
+ .color("blue")._scope()
+
+$: s("wt_digital")
+ .gain(1.2)
+ .scale("c:mayor")
+ .sustain(.5)
+ .seg(2)
+ .room(.8)
+ .delay(2.4)
+ .fast(.5)
+ .release(.7)
+ .shape(.2)
+ .postgain(1.2)
+  .attack("0 .2 .6")
+ .color("white")._scope()
+
+$: note("c").vib(.2)
+.vibmod("<14 ,12>:8")
+  .fast(.6)
+  .room(.8)
+  .release(.3)
+  .gain(.5)
+  .postgain(1.4)
+  .seg(4)
+  .attack("0 .6 .8")
+._scope()
+
+$: note("c1 e3")
+.sound('sawtooth')
+.bpf(1800)
+.bpa(4)
+.gain(3)
+  .postgain(2)
+  .fast(1)
+  .attack("0 .3")
+.bpenv("<4 2 -1 -2>/1")
+._scope()
+
+
+$: note("c3!8".add("{0 0 12 0 7 5 3}%4")).s("bytebeat:2").bbst("<3 1>".mul(10000))
+  .gain(5)
+  ._scope()
 
 
 
