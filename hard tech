@@ -242,7 +242,11 @@ $: note("d1!4").s("sine").penv(6).pdecay(.6).decay(.28).distort("4:.4")
 
 
 
+//////////////////////////////////////////////////////////////////////
 
+
+samples('shabda/speech:MAGNEMITE')
+$: s("MAGNEMITE").chop(1).speed(rand.range(0.85,1))
 
 
 
